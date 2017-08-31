@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="走秀网,www.xiu.com" name="author">
+		<meta content="走秀网,版权所有" name="Copyright">
+		<meta content="走秀网官网-国际品牌，流行尖货，与全球同步上新。女装、男装、鞋靴、包袋、腕表、饰品、妆品、家居、婴童、礼物等上千款时尚品牌-xiu.com 发现全球时尚。" name="description">
+		<meta content="走秀网,走秀网官网,xiu.com,国际品牌,全球购,海外名店,代购" name="keywords">
+		<title>盘点上半年好物 畅销热卖单品 抄底价特卖-发现全球时尚-走秀网官网</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/myCart.css" />
+		<script src="jq/jquery-1.12.3.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/myCart.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="header_inner">
+				<div class="left">
+					<a href="index.html"></a>
+				</div>
+				<div class="right">
+					<div class="wz1">
+						<p>在线客服</p>
+						<p>400-888-4499</p>
+						<p>客服热线(免长途费)：</p>
+					</div>
+					<div class="wz2">
+						您好!欢迎光临走秀网! [ 登录/注册 ] | 帮助中心  
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="shopcart">
+			<div class="shopcart_inner">
+				<ul class="top">
+					<li>
+						<span></span> 1.我的购物袋
+					</li>
+					<li>
+						<span></span> 2.填写并核对订单信息
+					</li>
+					<li>
+						<span></span> 3.成功提交订单
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="wap">
+			<div class="wap_inner">
+				<div class="empty">
+					<img src="images_cart/nogoods.jpg" />
+					<h2>购物袋暂没有商品，现在就去  </h2>
+					<a href="#">挑选自己喜欢的商品</a>
+				</div>
+				<div class="sp">
+					<table class="tb" cellpadding="0" cellspacing="0">
+						<tr class="firstTr">
+							<th>
+								<lable><input type="checkbox" checked='checked' id='allChecked' /> 全选 </lable>
+							</th>
+							<th>商品</th>
+							<th>购买价(元)</th>
+							<th>小计(元)</th>
+							<th>数量</th>
+							<th>操作</th>
+						</tr>
+						<tbody id="tbd">
+							<!--<tr class="firstTr">
+								<td>
+									<lable><input type="checkbox" checked='checked' id='allChecked' /> 全选 </lable>
+								</td>
+								<td>商品</td>
+								<td>购买价(元)</td>
+								<td>小计(元)</td>
+								<td>数量</td>
+								<td>操作</td>
+							</tr>-->
+							<!--<tr>
+								<th>
+									<lable><input type="checkbox" checked='checked' id='allChecked' /> 全选 </lable>
+								</th>
+								<th>商品</th>
+								<th>购买价(元)</th>
+								<th>小计(元)</th>
+								<th>数量</th>
+								<th>操作</th>
+							</tr>-->
+							<!--<tr>
+								<td>
+									<lable><input type="checkbox" /></lable>
+								</td>
+								<td>
+									<img src="images_cart/g1_66_88 (1).jpg" />
+									<p>Levi's<br>
+									      男士501直筒牛仔裤复古怀旧款00501-1999<br>
+								              颜色 : 牛仔色 尺码 : 28
+									</p>
+								</td>
+								<td>
+									<span>¥ 999</span>
+									<span>¥ 999</span>
+								</td>
+								<td>
+									<span>¥ 999</span>
+								</td>
+								<td id="goodsNum">
+									<input class="sub" type="button" value="-" />
+									<input class="num" type="text" value="1" />
+									<input class="sup" type="button" value="+" />
+								</td>
+								<td>
+									<a href="javascript:;">移至收藏夹</a><br />
+									<a href="javascript:;">删除</a>
+								</td>
+							</tr>-->
+							<!--<tr id="lastTr">
+								<td colspan="3">总价：333</td>
+								<td colspan="3"><a>删除选中</a></a></td>
+							</tr>-->
+						</tbody>  
+					</table>
+				</div>
+
+			</div>
+		</div>
+		<div id="xq">
+			<div class="top">您可能感兴趣的东西</div>
+			<div class="bottom">
+				<dl>
+					<dt><img src="images_cart/1.jpg"/></dt>
+					<dd>
+						<p>John Devin</p>
+						<p>男士修身秋冬针织衫 604189</p>
+						<p>走秀价：<span>¥99</span></p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images_cart/2.jpg"/></dt>
+					<dd>
+						<p>Calvin Klein Jeans</p>
+						<p>男士时尚休闲圆领长袖T恤</p>
+						<p>走秀价：<span>¥249</span></p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images_cart/3.jpg"/></dt>
+					<dd>
+						<p>Calvin Klein Jeans</p>
+						<p>男士 圆领 印花纯棉长袖T恤</p>
+						<p>走秀价：<span>¥219</span></p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images_cart/4.jpg"/></dt>
+					<dd>
+						<p>Calvin Klein Jeans</p>
+						<p>男士休闲圆领长袖T恤 604189</p>
+						<p>走秀价：<span>¥249</span></p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images_cart/5.jpg"/></dt>
+					<dd>
+						<p>Calvin Klein Jeans</p>
+						<p>男士圆领纯棉印花长袖T恤</p>
+						<p>走秀价：<span>¥249</span></p>
+					</dd>
+				</dl>
+			</div>
+			<div class="set">
+				<div class="ck"></div>
+				<div class="wz3">请<a href="#">登录</a>后查看您收藏的商品</div>
+			</div>
+			<div class="foot2_inner">
+				<p>Copyright © 2008-2017 Xiu.com深圳走秀网络科技有限公司 版权所有 . 粤ICP备07502993号</p>
+			</div>
+		</div>
+	</body>
+
+</html>

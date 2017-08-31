@@ -1,0 +1,28 @@
+ [
+ 	{
+ 		"id" : 1 ,
+ 		"img" : "images_sy/banner1.gif"
+	},
+ 
+ 	{
+ 		"id" : 2 ,
+ 		"img" : "images_sy/banner2a.jpg"
+	},
+ 
+ 	{
+ 		"id" : 3 ,
+ 		"img" : "images_sy/banner3.jpg"
+	},
+ 
+ 	{
+ 		"id" : 4 ,
+ 		"img" : "images_sy/banner4.jpg"
+	},
+ 
+ 	{
+ 		"id" : 5 ,
+ 		"img" : "images_sy/banner5.jpg"
+	}
+ 
+ 
+ ]

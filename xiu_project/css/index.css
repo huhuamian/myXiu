@@ -1,0 +1,347 @@
+/*************************************************轮播图*********************************************************/
+
+#banner {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	padding: 20px 0;
+}
+
+#banner_inner {
+	width: 1200px;
+	height: 610px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#list1 {
+	width: 4800px;
+	height: 610px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#list1 li {
+	width: 1200px;
+	height: 610px;
+	float: left;
+}
+
+#list2 {
+	height: 15px;
+	margin: 0 0 0 -63px;
+	z-index: 10;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+}
+
+#list2 li {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #ccc;
+	float: left;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+#list2 .bgcolor {
+	background: #707070;
+}
+
+#prev,#next{
+	width: 30px;
+	height: 64px;
+	position: absolute;
+	top: 45%;
+	cursor: pointer;
+}
+
+#prev{
+	left: 15px;
+	background: url(../images_sy/prev-next-icon.png) no-repeat -79px 0;
+}
+
+#next{
+	right: 15px;
+	background: url(../images_sy/prev-next-icon.png) no-repeat -116px 0;
+}
+
+
+/*轮播图结束*/
+
+
+/*************************************************最新入口*********************************************************/
+
+#wap {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+#wap .wap_inner {
+	width: 1170px;
+	height: 86px;
+	margin: 0 auto;
+	padding: 0 0 20px 30px;
+}
+
+#wap .wap_inner ul li a {
+	display: block;
+	float: left;
+	width: 250px;
+	height: 86px;
+	background: url(../images_sy/shortcut3a.jpg) no-repeat;
+	margin-right: 60px;
+	transition: all 0.3s linear;
+}
+
+#wap .wap_inner ul li:nth-of-type(2) a {
+	display: block;
+	background: url(../images_sy/shortcut3a.jpg) no-repeat -250px 0;
+}
+
+#wap .wap_inner ul li:nth-of-type(3) a {
+	display: block;
+	background: url(../images_sy/shortcut3a.jpg) no-repeat -740px 0;
+}
+
+#wap .wap_inner ul li:nth-of-type(4) a {
+	width: 215px;
+	display: block;
+	background: url(../images_sy/shortcut3a.jpg) no-repeat -980px 0;
+	margin-right: 0;
+}
+
+.move {
+	transform: translateX(-10px);
+}
+
+
+/*最新活动 结束*/
+
+
+/*************************************************尖货推荐*********************************************************/
+
+#best {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+#best .best_inner {
+	width: 1200px;
+	background: #fff;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+#best .best_inner h3 {
+	padding: 0 0 20px;
+	text-align: center;
+	margin-left: 449px;
+}
+
+#best .best_inner .tp {
+	width: 1200px;
+	height: 580px;
+	margin: 0 0 40px;
+	overflow: hidden;
+}
+
+
+
+
+
+#best .best_inner .tp li , #best .best_inner .tp-last li {
+	width: 395px;
+	height: 288px;
+	margin: 0 4px 4px 0;
+	float: left;
+	transition: all 0.3s linear;
+	cursor: pointer;
+	
+}
+
+#best .best_inner .tp li img , #best .best_inner .tp-last li img {
+	width: 395px;
+	height: 288px;
+	
+}
+
+
+#best .best_inner .tp-last {
+	width: 1200px;
+	height: 290px;
+	margin: 0 0 40px;
+	overflow: hidden;
+}
+
+
+.bg {
+	opacity: 0.8;
+}
+
+
+/*************************************************热荐专题*********************************************************/
+
+#best .best_inner .ct {
+	width: 1200px;
+	overflow: hidden;
+}
+
+#best .best_inner .ct li {
+	float: left;
+	margin-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#best .best_inner .ct li img {
+	transition: all 0.3s;
+}
+
+#best .best_inner .ct li p {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40px 0 0 -159px;
+}
+
+#best .best_inner .ct li:nth-child(5) p{
+	margin: -40px 0 0 -260px;
+}
+
+#best .best_inner .ct li:nth-child(6) p{
+	margin: -40px 0 0 -230px;
+}
+.magnify {
+	transform: scale(1.05);
+}
+
+#best .best_inner h4 {
+	padding: 0 0 20px;
+	text-align: center;
+	margin-left: 522px;
+}
+
+#best .best_inner .pic {
+	width: 1200px;
+	padding: 20px 0 50px;
+	overflow: hidden;
+}
+
+#best .best_inner .pic:hover {
+	opacity: 0.9;
+}
+
+
+/*************************************************发现好货*********************************************************/
+
+#best .best_inner .bt {
+	overflow: hidden;
+	width: 1217px;
+	margin: 0 auto 20px;
+}
+
+#best .best_inner .bt li {
+	float: left;
+	width: 287px;
+	height: 490px;
+	margin: 0 17px 20px 0;
+	overflow: hidden;
+}
+
+#best .best_inner .bt li:hover{
+box-shadow: -3px -3px 18px #ccc;
+	
+}
+
+/*.hotSellBg{
+box-shadow: -3px 5px 10px #ccc;
+}*/
+
+
+#best .best_inner .bt li a{
+	width: 287px;
+	height: 490px;
+	text-align: center;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+#best .best_inner .bt li a:hover{
+	border:3px solid #efefef ;
+}
+
+#best .best_inner .bt li a img{
+	width: 281px;
+	height: 484px;
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+
+
+#best .best_inner .bt li a span{
+	width: 0;
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+/*******************************侧边栏样式***************************************/
+
+#ceNav{
+	width: 100px;
+	height: 270px;
+	background: url(../images_sy/right_nav.png) no-repeat;
+	position: fixed;
+	top: 35%;
+	right: 0;
+	padding: 10px;
+	padding-right: 0;
+	
+}
+
+#ceList{
+	width: 94px;
+	height: 194px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+#ceList ul{
+	width: 94px;
+	height: 194px;
+
+}
+
+#ceList ul li{
+	width: 100%;
+	height: 31.5px;
+	
+}
+
+#ceList ul li a{
+	width: 100%;
+	height: 31.5px;
+	display: block;
+}
+
+/*******************************懒加载****************************************/
+
+
+
+
+

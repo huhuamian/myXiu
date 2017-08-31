@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0;padding:0}
+
+fieldset, img { border:none; }
+
+img{display: block;}
+
+input{outline: none;}
+	
+
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+
+ul, ol { list-style:none; }
+
+body { color:#333; font:1.1vw "microsoft yahei","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
+
+a { color:#666; text-decoration:none;font-size:12px }
+
+.clear:after{content:"."; display:block;height:0; clear:both; overflow:hidden; visibility:hidden;}
+
+a:visited { color:#666; }
+
+a:hover, a:active, a:focus { color:#ff8400;  }
+
+@media screen and (max-width:320px ) { html{font-size: 12px;} }
+@media screen and (min-width:321px) and (max-width:750px ) { html{font-size: 14px;} }
+@media screen and (min-width:751px ) { html{font-size: 16px;}
+
