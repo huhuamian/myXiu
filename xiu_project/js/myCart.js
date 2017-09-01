@@ -11,7 +11,7 @@ $(function(){
 			//刚进购物车有数据，或者进来后删除数据而无数据
 			arr = JSON.parse(arr);
 							
-			//因为这里是局不刷新，所以在增加节点之前先清空旧节点
+			//因为这里是局不刷新，所以在增加节点之前先清空旧节点  
 			$("#tbd").empty();
 
 			//计算总价
@@ -35,11 +35,11 @@ $(function(){
 						
 					}else{
 						
-						tr.append("<td><lable><input type='checkbox' class='check1' /></lable></td>") ;
+						tr.append("<td><lable><input type='checkbox' class='check1' /></lable></td>") ;  
 						
 					}
 					
-					tr.append("<td><img src='"+obj.imagmin[0]+"' /><p class='tdTextLeft'>"+obj.brand+"<br>"+obj.titer+"<br>颜色 :牛仔色 尺码 : 28</p></td>") ;
+					tr.append("<td><img src='"+obj.imagmin[0]+"' /><p class='tdTextLeft'>"+obj.brand+"<br>"+obj.titer+"<br>颜色 :"+obj.myChooseColor+" 尺码 : "+obj.myChooseSize+"</p></td>") ;
 					
 					if(obj.originalPrice){
 						
@@ -51,7 +51,7 @@ $(function(){
 					
 					var subtotal = obj.zxPrice*obj.num ;
 					
-					tr.append("<td><span>"+subtotal+"</span></td>") ;
+					tr.append("<td><span>"+obj.unit+subtotal+"</span></td>") ;
 					tr.append("<td id='goodsNum'><input class='sub' type='button' value='-' /><input class='num' type='text' value='"+obj.num+"' /><input class='sup' type='button' value='+' /></td>") ;
 					tr.append("<td><a href='javascript:;'>移至收藏夹</a><br /><a href='javascript:;' class='delete'>删除</a></td>") ;
 				

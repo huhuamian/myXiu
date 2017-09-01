@@ -183,23 +183,48 @@ $(function() {
 		
 		for(var a = 0 ; a < colorArr.length ; a++){
 			
-			$("#xq_color").append("<li><a href='javascript:;' class='goodColor' >"+colorArr[a]+"</a></li>");
+			$("#xq_color").append("<li><a href='javascript:;' class='goodColor' >"+colorArr[a]+"</a></li>") ;
 			
 		}
 		
 		//鼠标移入事件添加
-		$("#xq_color").on("mouseenter",".goodColor",function(){  
-			console.log($(this));
+		$("#xq_color a").eq(0).addClass("xqcolor checkBg");
+		
+		$("#xq_color").on("click","a",function(){ 
 			
-			$(this).addClass(".xqcolor").parent().siblings().find(".goodColor").removeClass(".xqcolor") ;
-			
+			$(this).addClass("xqcolor checkBg").parent().siblings().find(".goodColor").removeClass("xqcolor checkBg") ;
+		
 		});
 		
+		
 		//鼠标点击事件添加
+		
+			var chooseColor = obj.color[0] ;
+			
+			//console.log(typeof chooseColor) ;
+			
+			obj.myChooseColor = chooseColor ;
+
+		
+		
 		$("#xq_color").on("click","a",function(){
 			//console.log($(this));
+			var colorIndex = $(this).index("#xq_color a");
+			//console.log(colorIndex)
+			//console.log( obj.color[colorIndex])
 			
-			$(this).addClass(".checkBg").parent().siblings().find("a").removeClass(".checkBg") ;
+			$(this).addClass("checkBg").parent().siblings().find("a").removeClass("checkBg") ;
+			
+			chooseColor = obj.color[colorIndex] ;
+			
+			//console.log(typeof chooseColor) ;
+			
+			obj.myChooseColor = chooseColor ;
+			//obj.myChooseColor = "111" ;
+			
+			//console.log(obj.myChooseColor) ;
+			
+			
 			
 		});
 			
@@ -209,15 +234,42 @@ $(function() {
 		
 		var sizeArr = obj.size ;
 		
+		
+		
 		for(var b = 0 ; b < sizeArr.length ; b++){
 			
-			$("#xq_size").append("<li><a href='javascript:;'>"+sizeArr[b]+"</a></li>");
+			$("#xq_size").append("<li><a href='javascript:;' class='goodColor'>"+sizeArr[b]+"</a></li>");
 			
-			$("#xq_size").on("mouseenter","a",function(){
+			
+			$("#xq_size a").eq(0).addClass("xqcolor checkBg") ;
+			
+			//点击事件
+			
+			var chooseSize = obj.size[0] ;
+			
+			obj.myChooseSize = chooseSize ;
+			
+			
+			$("#xq_size").on("click","a",function(){
 				
-				$(this).addClass(".xqcolor").parent().siblings().find("a").removeClass(".xqcolor");
+				$(this).addClass("xqcolor checkBg").parent().siblings().find("a").removeClass("xqcolor checkBg");
 				
-			});
+				var sizeIndex = $(this).index("#xq_size a");
+				
+				chooseSize = obj.size[sizeIndex] ;
+				
+				obj.myChooseSize = chooseSize ;
+				
+				console.log(obj);
+				
+				
+//				localStorage.myChooseSize = JSON.stringify({"sizeCheck":chooseSize}) ;
+//				
+//				console.log( JSON.parse( localStorage.myChooseSize ).sizeCheck );
+			
+				
+			})
+			
 			
 			
 		/////////////////////////////////吸顶效果价格添加////////////////////////////////
@@ -226,10 +278,13 @@ $(function() {
 			
 			
 			//鼠标点击事件添加
+			
+			$("#xq_size a").eq(0).addClass("checkBg"); //第一个添加默认样式
+			
 			$("#xq_size").on("click","a",function(){
 				//console.log($(this));
 				
-				$(this).addClass(".checkBg").parent().siblings().find("a").removeClass(".checkBg") ;
+				$(this).addClass("checkBg ,xqcolor").parent().siblings().find("a").removeClass("checkBg ,xqcolor") ;
 				
 			});
 			
@@ -248,7 +303,6 @@ $(function() {
 			//将当前商品对象添加到cookie 购物车
 			
 			console.log(obj);
-			//var goodsArr = $.cookie("cart") ? JSON.parse( $.cookie("cart") ) : [] ;
 			var goodsArr = localStorage.cart ? JSON.parse( localStorage.cart ) : [] ;
 			
 			var isExst = false ; //表示购物车中不存在相同商品
@@ -267,6 +321,9 @@ $(function() {
 				
 				obj.num = 1 ;
 				obj.checked = true ; //表示默认选中
+				
+//				checkSize = 0 ;
+//				checkColor = 0 ;
 				goodsArr.push(obj);
 			
 			}
@@ -333,6 +390,7 @@ $(function() {
 			
 		});
 		
+		
 		function bagNum(){
 			
 			//购物袋商品数量显示
@@ -353,7 +411,7 @@ $(function() {
 			$.cookie("totalNum",JSON.stringify(bagNum),{expires:30}) ;
 			
 		}
-		console.log($.cookie("totalNum"))
+		//console.log($.cookie("totalNum"))
 		
 		
 		
@@ -429,8 +487,8 @@ $(function() {
 	
 	//////////////////////////////////////////吸顶效果////////////////////////////////////////////////////
 	
-	//  $("#wap")
 	
+
 	
 	var wapTop = $("#wap").offset().top ;
 	
@@ -452,7 +510,7 @@ $(function() {
 		
 		
 		//二维码显示隐藏
-		
+			$("#erweima").hide();
 		if( scrolltop >= 638){
 			$("#erweima").show();
 		}else{

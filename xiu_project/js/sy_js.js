@@ -216,15 +216,6 @@ $(function() {
 		
 
 
-//	$(".bt li").find("p").mouseenter(function() {
-//		$(this).css("border", "2px solid #d5d5d5");
-//	});
-//
-//	$(".bt li").find("p").mouseleave(function() {
-//		$(this).css("border", "1px solid #efefef");
-//	});
-
-
 
 
 

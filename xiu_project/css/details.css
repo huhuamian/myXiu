@@ -309,8 +309,8 @@ section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li a{
 	color:#646464;
 	text-align: center;
 	width:auto;
-	background: url(../images_xq/goods_info.gif)no-repeat -52px right;
-	
+/*	background: url(../images_xq/goods_info.gif)no-repeat -52px right;
+*/	
 }
 
 /*section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li a:hover{
@@ -321,7 +321,15 @@ section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li a{
 
 }*/
 
-.goodColor:hover{
+/*.goodColor:hover{
+	box-sizing: border-box;
+	border: 2px solid orange;
+	margin-right: 8px;
+	padding:0px 7px;
+
+}*/
+
+section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li a.xqcolor{
 	box-sizing: border-box;
 	border: 2px solid orange;
 	margin-right: 8px;
@@ -329,16 +337,13 @@ section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li a{
 
 }
 
-section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li .goodColor.xqcolor{
+section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li .goodColor:hover{
 	box-sizing: border-box;
 	border: 2px solid orange;
-	margin-right: 8px;
-	padding:0px 7px;
-
 }
 
-.checkBg{
-	background: url(../images_xq/goods_info.gif) no-repeat -262px -64px;
+section .se_inner .pro_con .con_main .p_js .bottom .con_hz .fl ul li a.checkBg{
+	background: url(../images_xq/goods_info.gif) no-repeat right -58px;
 }
 
 
